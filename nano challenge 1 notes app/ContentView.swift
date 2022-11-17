@@ -21,6 +21,8 @@ struct ContentView: View {
                     .foregroundColor(.black)) {
                         ForEach(folders, id: \.self){ folderName in
                             FolderCell(name: folderName)
+                            
+                            
                         }
                     }
                 
