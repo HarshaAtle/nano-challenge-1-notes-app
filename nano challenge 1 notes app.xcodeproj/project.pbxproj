@@ -11,6 +11,9 @@
 		C2E86FB22925265E0094AC80 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E86FB12925265E0094AC80 /* ContentView.swift */; };
 		C2E86FB4292526600094AC80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2E86FB3292526600094AC80 /* Assets.xcassets */; };
 		C2E86FB7292526600094AC80 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2E86FB6292526600094AC80 /* Preview Assets.xcassets */; };
+		C2E86FC22927E8BF0094AC80 /* MyNotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E86FC12927E8BF0094AC80 /* MyNotes.swift */; };
+		C2F7B81D292D53C0004875B7 /* FolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F7B81C292D53C0004875B7 /* FolderView.swift */; };
+		C2F7B81F292D5442004875B7 /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F7B81E292D5442004875B7 /* NoteView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		C2E86FB12925265E0094AC80 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C2E86FB3292526600094AC80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C2E86FB6292526600094AC80 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C2E86FC12927E8BF0094AC80 /* MyNotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNotes.swift; sourceTree = "<group>"; };
+		C2F7B81C292D53C0004875B7 /* FolderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderView.swift; sourceTree = "<group>"; };
+		C2F7B81E292D5442004875B7 /* NoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,8 +59,11 @@
 			children = (
 				C2E86FAF2925265E0094AC80 /* nano_challenge_1_notes_appApp.swift */,
 				C2E86FB12925265E0094AC80 /* ContentView.swift */,
+				C2E86FC12927E8BF0094AC80 /* MyNotes.swift */,
 				C2E86FB3292526600094AC80 /* Assets.xcassets */,
 				C2E86FB5292526600094AC80 /* Preview Content */,
+				C2F7B81C292D53C0004875B7 /* FolderView.swift */,
+				C2F7B81E292D5442004875B7 /* NoteView.swift */,
 			);
 			path = "nano challenge 1 notes app";
 			sourceTree = "<group>";
@@ -137,8 +146,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2F7B81D292D53C0004875B7 /* FolderView.swift in Sources */,
+				C2F7B81F292D5442004875B7 /* NoteView.swift in Sources */,
 				C2E86FB22925265E0094AC80 /* ContentView.swift in Sources */,
 				C2E86FB02925265E0094AC80 /* nano_challenge_1_notes_appApp.swift in Sources */,
+				C2E86FC22927E8BF0094AC80 /* MyNotes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

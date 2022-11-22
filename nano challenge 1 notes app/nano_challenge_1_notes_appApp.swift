@@ -4,14 +4,16 @@
 //
 //  Created by Harsha Vardhan on 16/11/22.
 //
-
 import SwiftUI
 
 @main
-struct nano_challenge_1_notes_appApp: App {
+struct SwiftUINotesAppCloneApp: App {
+    
+    @StateObject private var myNotes = MyNotes()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(myNotes: myNotes)
         }
     }
 }
