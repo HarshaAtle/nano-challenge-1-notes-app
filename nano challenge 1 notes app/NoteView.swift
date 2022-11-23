@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct NoteView: View {
-    @State var title = ""
-    @State var noteText = "-Lorem ipsum dolor sit amet-, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut -labore et dolore- magnaaliqua.\r #bThis sentence will be in bold#b\r #iThis will be in Italics#i\r #uThis will be underlined#u"
+    @State var title = "BreakingBad"
+    @State var noteText = "A high school chemistry teacher dying of cancer teams with a former student to secure his family's future by manufacturing and selling crystal meth and the legend name is Heisenberg!"
     
     
     

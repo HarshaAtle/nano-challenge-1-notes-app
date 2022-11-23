@@ -77,7 +77,6 @@ struct CreateNewFolder: View {
     @ObservedObject var myNotes: MyNotes
     @Binding var showingPopover: Bool
     @State var newFolderName = ""
-    // @ 11:27
     init( _ showingPopover: Binding<Bool>, with myNotes: MyNotes) {
         self._showingPopover = showingPopover
         self.myNotes = myNotes
