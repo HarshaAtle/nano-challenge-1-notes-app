@@ -6,7 +6,8 @@ struct ContentView: View {
     @State var searchString: String = ""
     @State var newFolderName: String = ""
     @State var showingPopover: Bool = false
-    
+    let testNotes = MyNotes()
+    @Environment(\.dismiss) var dismiss
     var body: some View {
         ZStack {
             NavigationView {
@@ -44,7 +45,7 @@ struct ContentView: View {
                         Spacer()
                         HStack {
                             Text("") // bug fix? @5:39 2nd video
-                            NavigationLink(destination: NoteView()) {
+                            NavigationLink(destination: NoteView(myNotes: testNotes)) {
                                 Image(systemName: "square.and.pencil")
                             }
                         }
@@ -77,6 +78,7 @@ struct CreateNewFolder: View {
     @ObservedObject var myNotes: MyNotes
     @Binding var showingPopover: Bool
     @State var newFolderName = ""
+    @Environment(\.dismiss) var dismiss
     init( _ showingPopover: Binding<Bool>, with myNotes: MyNotes) {
         self._showingPopover = showingPopover
         self.myNotes = myNotes
@@ -102,10 +104,14 @@ struct CreateNewFolder: View {
                     Spacer()
                     Color.gray.frame(width: 200, height: CGFloat(1))
                     HStack {
-                        Button( action: { print("Cancel") } ){
+                        Button( action: {
+                            self.showingPopover = false
+                            
+                        }) {
                             Text("Cancel")
                                 .frame(maxWidth: .infinity)
                         }
+
                         Button( action: {
                             myNotes.folders.append(Folder(name: newFolderName))
                             showingPopover.toggle()

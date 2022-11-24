@@ -9,6 +9,7 @@ import Foundation
 
 class MyNotes: ObservableObject {
     @Published var folders = [Folder]()
+    @Published var notes = [Note]()
 }
 
 struct Folder: Identifiable {

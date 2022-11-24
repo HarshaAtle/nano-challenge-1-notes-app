@@ -8,9 +8,12 @@
 import SwiftUI
 
 struct NoteView: View {
+    @ObservedObject var myNotes: MyNotes
     @State var title = "BreakingBad"
     @State var noteText = "A high school chemistry teacher dying of cancer teams with a former student to secure his family's future by manufacturing and selling crystal meth and the legend name is Heisenberg!"
-    
+    @Environment(\.dismiss) var dismiss
+    @State var newNoteName = ""
+    @State var newTitle = ""
     
     
     var body: some View {
@@ -19,7 +22,10 @@ struct NoteView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Done") {
-                        print("Done")
+                        myNotes.notes
+                            .append(Note(title: newTitle))
+                        dismiss()
+               
                     }
                 }
             }
@@ -115,7 +121,8 @@ struct TextView: UIViewRepresentable {
 
 struct NoteView_Previews: PreviewProvider {
     static var previews: some View {
-        NoteView()
+        let testNotes = MyNotes()
+        NoteView(myNotes: testNotes)
     }
 }
 
